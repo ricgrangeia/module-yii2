@@ -1,0 +1,5 @@
+suite_namespace: common\modules\AATemplateModule\tests\functional
+actor: FunctionalTester
+modules:
+    enabled:
+        - Yii2
