@@ -1,6 +1,8 @@
 # module-yii2
 ### Module folder and structure for Yii2
 
+@ Tags, Yii2, Module, Modules, Structure, Simplify, Logic, Tests, DDD, TDD
+
 Yii2 is MVC, but in big projects all get messy.
 
 So, this is not new stuff, but to help who wants to simplify the structure of the code, making easier to work.
