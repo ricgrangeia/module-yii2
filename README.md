@@ -24,6 +24,44 @@ app .
     
 ```
 
+Why i have modules in common, using the advanced?
+
+Because i use the mdmsoft/yii2-admin rbac
+
+And on params.php
+
+```
+	/** To change the Users database external do main company database */
+	'mdm.admin.configs' => [
+		'userDb' => 'dbusers',
+		'menuTable' => 'menu',
+		'advanced' => [
+			'app-backend' => [
+				'@common/config/main.php',
+				'@common/config/main-local.php',
+				'@backend/config/main.php',
+				'@backend/config/main-local.php',
+			],
+			'app-frontend' => [
+				'@common/config/main.php',
+				'@common/config/main-local.php',
+				'@frontend/config/main.php',
+				'@frontend/config/main-local.php',
+			],
+			'app-funcionario' => [
+				'@common/config/main.php',
+				'@common/config/main-local.php',
+				'@funcionario/config/main.php',
+				'@funcionario/config/main-local.php',
+			],
+		],
+	],
+```
+And with this config, in common are almost all the modules and still be used by others subApps and secured between 
+Backend and Frontend
+
+Not perfect bt it works and the main logic of each module, is all inside of it.
+
 Ex Module:
 TaskManager
 
